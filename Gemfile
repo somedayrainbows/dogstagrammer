@@ -13,6 +13,7 @@ gem 'faraday'
 gem 'faker'
 gem 'haml-rails'
 gem 'paperclip'
+gem 'simple_form'
 
 group :development, :test do
   gem 'pry'
