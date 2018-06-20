@@ -1,7 +1,8 @@
-= simple_form_for @post, validation: true do |f|
-  = f.input :caption, as: :text, label: "Enter a caption", error: "This is required"
-  = f.input :image, as: :file, label: "Upload your image", error: "An image is required"
+%div
+  = simple_form_for @post, validation: true do |f|
+    = f.input :caption, as: :text, label: "Enter a caption", required: true, error: "This is required"
+    = f.input :image, as: :file, label: "Upload your image", error: "An image is required"
 
-  %p
-  = f.button :submit
-  = link_to 'Cancel', :back
+    %p
+    = f.button :submit
+    = link_to 'Cancel', :back

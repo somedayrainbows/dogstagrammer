@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+%html
+  %head
+    %title Dogstagram
+    = csrf_meta_tags
+    = stylesheet_link_tag 'application', media: 'all'
+    = javascript_include_tag 'application'
+    %meta{name: "viewport", content: "width=device-width, initial-scale=1"}
+
+  %body
+    %nav.navbar.navbar-default
+  .navbar-container
+    .navbar-header
+      %button.navbar-toggle.collapsed{"data-target" => "#bs-navbar-collapse-1", "data-toggle" => "collapse", type: "button"}
+        %span.sr-only Toggle Navigation
+        %span.icon-bar
+        %span.icon-bar
+      .navbar-brand= link_to "Dogstagram", root_path
+    .collapse.navbar-collapse#bs-navbar-collapse-1
+      %ul.nav.navbar-nav.navbar-right
+        %li
+          = link_to "New Post", new_post_path
+        %li
+          = link_to "Login", '#'
+        %li
+          = link_to "Signup", '#'
+
+    = yield
